@@ -33,6 +33,10 @@ public class CardTrick {
             //c.setValue(insert call to random number generator here)
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
         }
+
+         Card luckyCard = new Card();
+        luckyCard.setValue(2); // Hard-coded value
+        luckyCard.setSuit("Clubs"); 
         
         System.out.print("Pick a card value (1-13): ");
         int userValue = scanner.nextInt();
@@ -53,6 +57,11 @@ public class CardTrick {
             found = true;
                 break;
             }
+        }
+            // if the user getts the lucky card
+         if (luckyCard.getValue() == userCard.getValue() && luckyCard.getSuit().equalsIgnoreCase(userCard.getSuit())) {
+            found = true;
+            System.out.println("Congratulations! You picked the lucky card!");
         }
         
          if (found) {
