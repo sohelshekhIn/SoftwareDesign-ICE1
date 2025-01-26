@@ -27,8 +27,6 @@ public class CardTrick {
             Card c = new Card();
             c.setValue(random.nextInt(13) + 1); // Generates random value between 1-13
             c.setSuit(Card.SUITS[random.nextInt(4)]); // Randomly selects a suit from SUITS array
-            System.out.println(c.getSuit());
-            System.out.println(c.getValue());
             magicHand[i] = c;
             //c.setValue(insert call to random number generator here)
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
